@@ -8,7 +8,7 @@ This project is a LIO pytorch implementation of [*Look-into-Object: Self-supervi
 
 ## Getting Started
 
-Implementations for image classification would be released in few days.
+Implementations for image classification can be found in [classification/](./classification/).
 
 Implementations for image detection and segmentation can be found in [segmentation/](./segmentation/).
 
