@@ -1,4 +1,4 @@
-# Segmentation with SCL
+# Classification with LIO
 
 This page provides basic tutorials about the usage of Look-into-Object for image classfication.
 
