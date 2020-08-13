@@ -2,7 +2,7 @@
 
 This page provides basic tutorials about the usage of Look-into-Object for image classfication.
 
-This code is tested with PyTorch 1.4.0 and torchvision 0.4.1.
+This code is tested with PyTorch 1.3.0 and torchvision 0.4.1.
 
 ## Setup
 ### Install dependencies
