@@ -62,7 +62,7 @@ def train(cfg,
         model = [e.train(True) for e in model]
         extractor, classifier = model
         L = len(data_loader['train'])
-        logging.info('current backbone lr: %f' % scheduler.get_lr()[0])
+        logging.info('current backbone lr: %f' % optimizer.param_groups[0]['lr'])
         for batch_cnt, data in enumerate(data_loader['train']):
             step+=1
             batch_start = time.time()
@@ -106,7 +106,7 @@ def train(cfg,
             logging.info(stt)
             with open(logfile, 'a') as f:
                 f.write(stt + '\n')
-        logging.info('current backbone lr: %f' % scheduler.get_lr()[0])
+        logging.info('current backbone lr: %f' % optimizer.param_groups[0]['lr'])
         # val phase
         model = [e.train(False) for e in model]
 
@@ -142,7 +142,7 @@ def train(cfg,
         t1 = time.time()
         since = t1-t0
         logging.info('--'*30)
-        logging.info('current backbone lr:%f' % scheduler.get_lr()[0])
+        logging.info('current backbone lr:%f' % optimizer.param_groups[0]['lr'])
 
         logging.info('%s epoch[%d]-val-loss: %.4f ||val-acc@1: %.4f ||time: %d'
                         % (dt(), epoch, val_loss, val_acc1, since))
